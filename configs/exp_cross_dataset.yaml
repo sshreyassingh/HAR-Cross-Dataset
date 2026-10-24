@@ -1,0 +1,8 @@
+_base_: base.yaml
+
+experiment:
+  name: cross_dataset_baseline
+  models: [cnn, tcn, tiny_transformer]
+  train_datasets: [uci_har, wisdm, pamap2]
+  test_datasets: [uci_har, wisdm, pamap2]
+  report_degradation: true

@@ -1,0 +1,13 @@
+_base_: base.yaml
+
+experiment:
+  name: smoke
+  models: [cnn]
+  train_datasets: [uci_har]
+  test_datasets: [uci_har]
+
+train:
+  epochs: 1
+
+eval:
+  num_seeds: 1

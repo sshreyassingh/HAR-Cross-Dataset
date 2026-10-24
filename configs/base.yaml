@@ -1,0 +1,28 @@
+seed: 42
+device: auto
+
+data:
+  root: data/raw
+  processed: data/processed
+  splits_dir: splits
+  label_space: common
+  window_size: 128
+  overlap: 0.5
+  normalize: per_channel_zscore   # fit on train only
+  batch_size: 64
+
+train:
+  epochs: 30
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  optimizer: adam
+  scheduler: cosine
+  early_stopping_patience: 5
+
+eval:
+  metrics: [accuracy, macro_f1]
+  num_seeds: 3
+
+output:
+  results_dir: results
+  figures_dir: figures

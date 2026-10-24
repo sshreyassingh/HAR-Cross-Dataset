@@ -1,0 +1,23 @@
+# TODO: verify sampling rates and sensors against each dataset's documentation,
+# then record the final choices in docs/DECISIONS.md.
+uci_har:
+  source: https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones
+  local_dir: data/raw/uci_har
+  sampling_rate_hz: 50
+  sensors: [accelerometer, gyroscope]
+
+wisdm:
+  source: TODO
+  local_dir: data/raw/wisdm
+  sampling_rate_hz: 20
+
+pamap2:
+  source: TODO
+  local_dir: data/raw/pamap2
+  sampling_rate_hz: 100
+
+# Map each dataset's labels into one shared set (fill after inspecting the data).
+common_label_space:
+  walking: [WALKING]
+  sitting: [SITTING]
+  standing: [STANDING]

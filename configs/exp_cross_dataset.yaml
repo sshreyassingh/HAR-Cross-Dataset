@@ -1,8 +1,8 @@
 _base_: base.yaml
 
 experiment:
-  name: cross_dataset_baseline
+  name: cross_dataset_main
   models: [cnn, tcn, tiny_transformer]
-  train_datasets: [uci_har, wisdm, pamap2]
-  test_datasets: [uci_har, wisdm, pamap2]
-  report_degradation: true
+  core_domains: [uci_har, wisdm, pamap2_hand]
+  extra_domains: [pamap2_chest, pamap2_ankle]   # sources use the pamap2_hand best config, no tuning
+  report_drop: true                              # within-dataset minus cross-dataset

@@ -1,28 +1,40 @@
-seed: 42
-device: auto
+seed: 0
 
 data:
-  root: data/raw
-  processed: data/processed
-  splits_dir: splits
-  label_space: common
-  window_size: 128
-  overlap: 0.5
-  normalize: per_channel_zscore   # fit on train only
-  batch_size: 64
+  signal: accelerometer_3axis
+  units: g
+  sampling_rate_hz: 20
+  window_size: 50          # 2.5 s
+  stride: 25               # 50% overlap
+  max_gap_s: 0.5           # no window across a gap, subject change or activity change
+  num_classes: 5
+  classes: [walking, upstairs, downstairs, sitting, standing]
+  normalization: source_train_per_channel   # mean/std from source-train only, gravity kept
+  processed_file: data/processed/{domain}.npz
+  splits_file: splits/{domain}.json
 
 train:
-  epochs: 30
-  lr: 1.0e-3
-  weight_decay: 1.0e-4
   optimizer: adam
-  scheduler: cosine
+  batch_size: 128
+  max_epochs: 30
   early_stopping_patience: 5
+  early_stopping_metric: source_val_macro_f1
+  loss: class_weighted_cross_entropy
+
+model:
+  target_params: 75000
+  param_tolerance: 0.10    # all three models within 10% of each other
+
+tuning:
+  n_configs: 8
+  max_epochs: 15
+  split: 0
+  seed: 0
+  # search: lr {3e-4, 1e-3, 3e-3}, dropout, weight decay, kernel size (TODO: fix the exact values)
+
+final:
+  seeds: [0, 1, 2]         # seed k uses split k
 
 eval:
-  metrics: [accuracy, macro_f1]
-  num_seeds: 3
-
-output:
-  results_dir: results
-  figures_dir: figures
+  headline_metric: macro_f1
+  metrics: [acc, macro_f1, weighted_f1, kappa]

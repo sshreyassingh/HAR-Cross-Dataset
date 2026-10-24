@@ -218,3 +218,35 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---- Project: data (raw data never goes in git) ----
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.zip
+*.tar.gz
+*.7z
+
+# ---- Project: model checkpoints and large outputs ----
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.h5
+experiments/**/checkpoints/
+
+# ---- LaTeX build files (log is already covered above) ----
+*.aux
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.idea/

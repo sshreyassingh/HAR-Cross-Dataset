@@ -1,23 +1,44 @@
-# TODO: verify sampling rates and sensors against each dataset's documentation,
-# then record the final choices in docs/DECISIONS.md.
+# All domains: 3-axis accelerometer in g, anti-alias filtered, resampled to 20 Hz
+# (see docs/DECISIONS.md D-003). native_rate_hz is the original rate; verify each
+# against the dataset documentation for the exact version you download.
+
 uci_har:
   source: https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones
   local_dir: data/raw/uci_har
-  sampling_rate_hz: 50
-  sensors: [accelerometer, gyroscope]
+  native_rate_hz: 50
+  role: core
 
 wisdm:
-  source: TODO
+  source: TODO        # add the exact version/URL the team agrees on
   local_dir: data/raw/wisdm
-  sampling_rate_hz: 20
+  native_rate_hz: 20  # verify for the version used
+  role: core
 
-pamap2:
+pamap2_hand:
   source: TODO
   local_dir: data/raw/pamap2
-  sampling_rate_hz: 100
+  native_rate_hz: 100 # verify
+  imu_location: hand
+  role: core
 
-# Map each dataset's labels into one shared set (fill after inspecting the data).
+pamap2_chest:
+  source: TODO
+  local_dir: data/raw/pamap2
+  native_rate_hz: 100
+  imu_location: chest
+  role: extra         # source uses the pamap2_hand best config, no tuning
+
+pamap2_ankle:
+  source: TODO
+  local_dir: data/raw/pamap2
+  native_rate_hz: 100
+  imu_location: ankle
+  role: extra
+
+# Map each dataset's activity labels to the 5 shared classes (fill after inspecting the label names).
 common_label_space:
-  walking: [WALKING]
-  sitting: [SITTING]
-  standing: [STANDING]
+  walking: []
+  upstairs: []
+  downstairs: []
+  sitting: []
+  standing: []

@@ -1,0 +1,9 @@
+X (7352, 128, 3), y (7352,), 21 train subjects
+walking     mean |a| = 1.052
+upstairs    mean |a| = 1.047
+downstairs  mean |a| = 1.042
+sitting     mean |a| = 1.021
+standing    mean |a| = 1.033
+laying      mean |a| = 1.007
+50% overlap holds in 0.955 of 7072 consecutive pairs
+walking dominant freq (Hz): 1.56

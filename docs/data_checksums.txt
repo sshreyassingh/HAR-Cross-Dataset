@@ -1,0 +1,7 @@
+UCI-HAR download record
+date_recorded: 2026-11-13
+source_url: https://archive.ics.uci.edu/static/public/240/human+activity+recognition+using+smartphones.zip
+uci_dataset_id: 240
+version: 1.0
+UCI HAR Dataset.zip  sha256=2045e435c955214b38145fb5fa00776c72814f01b203fec405152dac7d5bfeb0  bytes=60999314
+uci_har.zip  sha256=c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031  bytes=61005872

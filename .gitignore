@@ -250,3 +250,16 @@ experiments/**/checkpoints/
 .DS_Store
 Thumbs.db
 .idea/
+
+
+# ---- Protocol required extras ----
+checkpoints/
+*.pt
+*.pth
+.env
+
+# Keep empty result folders
+results/raw/*
+!results/raw/.gitkeep
+results/tables/*
+!results/tables/.gitkeep

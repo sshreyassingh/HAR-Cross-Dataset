@@ -1,0 +1,3 @@
+# UCI-HAR
+
+UCI-HAR (UCI ID 240), downloaded 2026-11-13. total_acc signals are in standard gravity units (g): mean acceleration magnitude is 1.02 to 1.03 g for sitting and standing. Windows are 128 samples (2.56 s at the documented 50 Hz) with 50% overlap, which holds for 95.5% of consecutive same-subject, same-activity pairs; the remainder appear to be bout boundaries. Walking energy peaks at 1.56 Hz, consistent with 50 Hz sampling. We use total_acc (gravity retained) per the protocol. Checksums are in `docs/data_checksums.txt`.

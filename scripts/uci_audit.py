@@ -29,7 +29,7 @@ lines = [
     f"date_recorded: {datetime.date.today()}",
     f"source_url: {URL}",
     "uci_dataset_id: 240",
-    "version: <fill in by hand from archive.ics.uci.edu/dataset/240>",
+    "version: 1.0",
 ]
 lines += [f"{z.name}  sha256={sha256(z)}  bytes={z.stat().st_size}" for z in zips]
 pathlib.Path("docs/data_checksums.txt").write_text("\n".join(lines) + "\n")

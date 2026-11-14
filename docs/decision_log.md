@@ -35,3 +35,5 @@ Source of truth: `PROTOCOL.md` (tag: protocol-v1-sprint).
 - 4 random configs per model
 - Only on UCI-HAR, split 0, seed 0, max 10 epochs
 - Best config is reused for WISDM and PAMAP2-hand
+
+2026-11-15 (Shreya): UCI-HAR uses the preferred stitch method (amendment 5), not the fallback. Train 7352 rows chained into 600 segments, test 2947 rows into 257. Windows never cross a gap in the overlap. Output: 8355 windows, 30 subjects. See docs/data_cards/uci_har.md.

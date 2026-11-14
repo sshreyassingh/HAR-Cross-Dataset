@@ -1,3 +1,11 @@
 # UCI-HAR
 
 UCI-HAR (UCI ID 240), downloaded 2026-11-13. total_acc signals are in standard gravity units (g): mean acceleration magnitude is 1.02 to 1.03 g for sitting and standing. Windows are 128 samples (2.56 s at the documented 50 Hz) with 50% overlap, which holds for 95.5% of consecutive same-subject, same-activity pairs; the remainder appear to be bout boundaries. Walking energy peaks at 1.56 Hz, consistent with 50 Hz sampling. We use total_acc (gravity retained) per the protocol. Checksums are in `docs/data_checksums.txt`.
+
+## Processed output (src/data/uci.py)
+
+Method: stitch (preferred route, amendment 5). Consecutive rows of the same subject and activity whose 64-sample overlap matches exactly (within 1e-6 g) were chained into continuous signals: train 7352 rows into 600 segments (6752 links), test 2947 rows into 257 segments (2690 links). A break in the overlap is treated as a gap, and no window crosses one. Each segment was anti-alias filtered and resampled from 50 to 20 Hz with `scipy.signal.resample_poly(up=2, down=5, padtype="line")`, then cut into 50-sample windows with stride 25. Laying is dropped; classes are 0 walking, 1 upstairs, 2 downstairs, 3 sitting, 4 standing.
+
+Output: `data/processed/uci.npz` (not committed; rebuild with `python -m src.data.uci --sha256 <zip hash>`). X (8355, 50, 3) float32 in raw g, with y, subject_id (30 subjects) and meta (JSON string). Class counts: walking 1722, upstairs 1544, downstairs 1406, sitting 1777, standing 1906. Mean |a| is 1.02 to 1.05 g in every class (sitting 1.021, standing 1.033). The original train and test files were pooled; our own subject-wise splits are in `splits/uci.json`.
+
+Caveats: the dataset authors filtered the signals before windowing (<exact README wording>); waist-phone orientation may differ across subjects; the 50 Hz rate comes from the dataset README because the files contain no timestamps; 20 Hz keeps only content below 10 Hz; the first and last ~0.5 s of each stitched segment pass through the resampling filter's edge handling.

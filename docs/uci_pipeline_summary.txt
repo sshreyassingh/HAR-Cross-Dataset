@@ -1,0 +1,14 @@
+windows: (8355, 50, 3)  dtype=float32  subjects: 30
+train rows= 7352  segments= 600  links= 6752  mean windows/segment=12.3
+test  rows= 2947  segments= 257  links= 2690  mean windows/segment=11.5
+
+class counts and mean |a| (g):
+  0 walking     n=  1722  subjects=30  mean|a|=1.050
+  1 upstairs    n=  1544  subjects=30  mean|a|=1.046
+  2 downstairs  n=  1406  subjects=30  mean|a|=1.041
+  3 sitting     n=  1777  subjects=30  mean|a|=1.021
+  4 standing    n=  1906  subjects=30  mean|a|=1.033
+
+NaN count: 0
+
+saved data/processed/uci.npz

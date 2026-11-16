@@ -270,29 +270,16 @@ def validate_best_configs(models, configs):
 def make_target_loader(
     domain, normalization, batch_size, base, split_index=0
 ):
-    """Load target test subjects using source-training normalization."""
+    """Load all target windows using source-training normalization."""
 
     path = ROOT / base["data"]["processed_file"].format(
         domain=domain
     )
-    split_path = ROOT / base["data"]["splits_file"].format(
-        domain=domain
-    )
 
     X, y, subject_id = load_har_data(path)
-    split = load_split(split_path, split_index)
 
-    test_ids = np.asarray(split["test"])
-    test_mask = np.isin(subject_id, test_ids)
-
-    if not test_mask.any():
-        raise ValueError(
-            f"No target test windows found for {domain}, "
-            f"split {split_index}."
-        )
-
-    X = X[test_mask]
-    y = y[test_mask]
+    # Cross-dataset evaluation uses ALL target windows.
+    # No target split or test-subject filtering is applied.
 
     X = apply_normalization(
         X,

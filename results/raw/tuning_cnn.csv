@@ -1,0 +1,5 @@
+model,dataset,split,seed,trial,learning_rate,dropout,weight_decay,kernel_size,val_macro_f1,best_epoch,is_best,width,n_params
+cnn,uci,0,0,1,0.0003,0.5,0.0001,3,0.9338768251961035,9,False,90,75335
+cnn,uci,0,0,2,0.001,0.3,0.0001,5,0.9354027635477529,6,False,70,75815
+cnn,uci,0,0,3,0.003,0.3,0.0001,3,0.936923899483158,6,True,90,75335
+cnn,uci,0,0,4,0.001,0.5,0.0001,7,0.9299723691481804,5,False,59,75407

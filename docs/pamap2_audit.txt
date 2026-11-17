@@ -1,0 +1,43 @@
+found 14 .dat files
+
+Optional/subject101.dat: rows=319352  duration=3193.5s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=256  non-increasing timestamps=0
+Optional/subject105.dat: rows=154773  duration=1547.7s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=20  non-increasing timestamps=0
+Optional/subject106.dat: rows=129963  duration=1299.6s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=66  non-increasing timestamps=0
+Optional/subject108.dat: rows=180412  duration=1804.1s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=469  non-increasing timestamps=0
+Optional/subject109.dat: rows=193472  duration=1934.7s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=386  non-increasing timestamps=0
+Protocol/subject101.dat: rows=376417  duration=3764.2s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=1454  non-increasing timestamps=0
+Protocol/subject102.dat: rows=447000  duration=4470.0s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=2729  non-increasing timestamps=0
+Protocol/subject103.dat: rows=252833  duration=2528.3s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=522  non-increasing timestamps=0
+Protocol/subject104.dat: rows=329576  duration=3295.8s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=2214  non-increasing timestamps=0
+Protocol/subject105.dat: rows=374783  duration=3747.8s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=1541  non-increasing timestamps=0
+Protocol/subject106.dat: rows=361817  duration=3618.2s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=1021  non-increasing timestamps=0
+Protocol/subject107.dat: rows=313599  duration=3136.0s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=1506  non-increasing timestamps=0
+Protocol/subject108.dat: rows=408031  duration=4080.3s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=2151  non-increasing timestamps=0
+Protocol/subject109.dat: rows=8477  duration=84.8s  median dt=0.0100s (rate ~100.0 Hz)  max dt=0.010s  hand-acc NaN rows=3  non-increasing timestamps=0
+
+subjects found: [101, 102, 103, 104, 105, 106, 107, 108, 109]  (count 9)
+
+rows per activityID per subject (Protocol folder):
+                         101     102    103    104     105     106    107     108   109
+0 other (transient)   126460  183651  78495  98155  102341  111721  80823  145929  2086
+1 lying                27187   23430  22044  23047   23699   23340  25611   24165     0
+2 sitting              23480   22345  28761  25492   26864   23041  12282   22923     0
+3 standing             21717   25576  20533  24706   22132   24356  25751   25160     0
+4 walking              22253   32533  29036  31932   32033   25721  33720   31533     0
+5 running              21265    9238      0      1   24646   22825   3692   16532     0
+6 cycling              23575   25108      0  22699   24577   20486  22680   25475     0
+7 nordic walking       20265   29739      0  27533   26271   26686  28725   28888     0
+12 ascending stairs    15890   17342  10389  16694   14281   13291  17646   11683     0
+13 descending stairs   14899   15213  15275  14285   12727   11272  11618    9655     0
+16 vacuum cleaning     22941   20683  20325  20037   24445   21078  21552   24292     0
+17 ironing             23573   28880  27975  24995   33034   37744  29499   32990     0
+24 rope jumping        12912   13262      0      0    7733     256      0    8806  6391
+
+hand acc (+/-16 g columns) mean magnitude at rest:
+  activity 2 (sitting): 9.76 m/s^2 over 8 subjects (1 g = 9.80665 m/s^2, so about 1.00 g)
+  activity 3 (standing): 9.78 m/s^2 over 8 subjects (1 g = 9.80665 m/s^2, so about 1.00 g)
+
+hand acc overall range: min=-145.4  max=157.8 m/s^2 (+/-16 g would be +/-156.9)
+hand acc NaN fraction (Protocol): 0.0046
+
+saved figures/pamap2_raw_hand_acc.png

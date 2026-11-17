@@ -1,0 +1,24 @@
+windows: (6602, 50, 3)  dtype=float32  subjects with windows: 8
+
+windows per subject (0 = subject has no window for the 5 classes):
+  subject 101: 775
+  subject 102: 893
+  subject 103: 821
+  subject 104: 894
+  subject 105: 853
+  subject 106: 770
+  subject 107: 798
+  subject 108: 798
+  subject 109: 0
+
+class counts and mean |a| (g):
+  0 walking     n=  1899  subjects= 8  mean|a|=1.149
+  1 upstairs    n=   913  subjects= 8  mean|a|=1.089
+  2 downstairs  n=   813  subjects= 8  mean|a|=1.052
+  3 sitting     n=  1469  subjects= 8  mean|a|=0.995
+  4 standing    n=  1508  subjects= 8  mean|a|=0.997
+
+NaN count in X: 0
+cleaning stats: {'segments': 57, 'edge_samples_trimmed': 19, 'nan_runs_interpolated': 4178, 'nan_samples_interpolated': 6661}
+
+saved data/processed/pamap2_hand.npz

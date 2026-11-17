@@ -1,0 +1,68 @@
+git commit: ea2378e620297bc6618be2b853247a81c0330443
+device: cpu  torch 2.4.1+cpu  numpy 1.26.4  python 3.12.3
+Loading UCI data and split 0...
+Starting four Tiny Transformer tuning trials...
+
+Trial 1/4: {'learning_rate': 0.0003, 'dropout': 0.5, 'weight_decay': 0.0001, 'num_heads': 2}
+Epoch 1/10 | Train loss: 1.3431 | Val macro-F1: 0.6089
+Epoch 2/10 | Train loss: 1.0151 | Val macro-F1: 0.7205
+Epoch 3/10 | Train loss: 0.7974 | Val macro-F1: 0.7582
+Epoch 4/10 | Train loss: 0.6554 | Val macro-F1: 0.7967
+Epoch 5/10 | Train loss: 0.5716 | Val macro-F1: 0.8142
+Epoch 6/10 | Train loss: 0.5136 | Val macro-F1: 0.8412
+Epoch 7/10 | Train loss: 0.4630 | Val macro-F1: 0.8637
+Epoch 8/10 | Train loss: 0.4306 | Val macro-F1: 0.8657
+Epoch 9/10 | Train loss: 0.3917 | Val macro-F1: 0.8823
+Epoch 10/10 | Train loss: 0.3720 | Val macro-F1: 0.8581
+Trial 1 validation macro-F1: 0.8823
+
+Trial 2/4: {'learning_rate': 0.001, 'dropout': 0.3, 'weight_decay': 0.0001, 'num_heads': 4}
+Epoch 1/10 | Train loss: 0.8777 | Val macro-F1: 0.7785
+Epoch 2/10 | Train loss: 0.3915 | Val macro-F1: 0.9008
+Epoch 3/10 | Train loss: 0.2806 | Val macro-F1: 0.8700
+Epoch 4/10 | Train loss: 0.2488 | Val macro-F1: 0.8942
+Epoch 5/10 | Train loss: 0.2401 | Val macro-F1: 0.9109
+Epoch 6/10 | Train loss: 0.2179 | Val macro-F1: 0.9086
+Epoch 7/10 | Train loss: 0.2030 | Val macro-F1: 0.9098
+Epoch 8/10 | Train loss: 0.2112 | Val macro-F1: 0.8908
+Epoch 9/10 | Train loss: 0.1851 | Val macro-F1: 0.8975
+Epoch 10/10 | Train loss: 0.1829 | Val macro-F1: 0.9104
+Early stopping triggered.
+Trial 2 validation macro-F1: 0.9109
+
+Trial 3/4: {'learning_rate': 0.003, 'dropout': 0.3, 'weight_decay': 0.0, 'num_heads': 4}
+Epoch 1/10 | Train loss: 0.6702 | Val macro-F1: 0.8761
+Epoch 2/10 | Train loss: 0.3057 | Val macro-F1: 0.8853
+Epoch 3/10 | Train loss: 0.2477 | Val macro-F1: 0.8922
+Epoch 4/10 | Train loss: 0.2262 | Val macro-F1: 0.8662
+Epoch 5/10 | Train loss: 0.2253 | Val macro-F1: 0.8795
+Epoch 6/10 | Train loss: 0.2125 | Val macro-F1: 0.8399
+Epoch 7/10 | Train loss: 0.2003 | Val macro-F1: 0.8729
+Epoch 8/10 | Train loss: 0.1967 | Val macro-F1: 0.9004
+Epoch 9/10 | Train loss: 0.1948 | Val macro-F1: 0.8846
+Epoch 10/10 | Train loss: 0.1879 | Val macro-F1: 0.9024
+Trial 3 validation macro-F1: 0.9024
+
+Trial 4/4: {'learning_rate': 0.001, 'dropout': 0.5, 'weight_decay': 0.0001, 'num_heads': 4}
+Epoch 1/10 | Train loss: 1.0227 | Val macro-F1: 0.7348
+Epoch 2/10 | Train loss: 0.5686 | Val macro-F1: 0.8700
+Epoch 3/10 | Train loss: 0.3993 | Val macro-F1: 0.8735
+Epoch 4/10 | Train loss: 0.3459 | Val macro-F1: 0.8225
+Epoch 5/10 | Train loss: 0.3198 | Val macro-F1: 0.8931
+Epoch 6/10 | Train loss: 0.2968 | Val macro-F1: 0.8441
+Epoch 7/10 | Train loss: 0.2839 | Val macro-F1: 0.8636
+Epoch 8/10 | Train loss: 0.2698 | Val macro-F1: 0.8647
+Epoch 9/10 | Train loss: 0.2569 | Val macro-F1: 0.8583
+Epoch 10/10 | Train loss: 0.2607 | Val macro-F1: 0.8841
+Early stopping triggered.
+Trial 4 validation macro-F1: 0.8931
+
+Best configuration: {'learning_rate': 0.001, 'dropout': 0.3, 'weight_decay': 0.0001, 'num_heads': 4}
+Best validation macro-F1: 0.9109254706937646
+
+UCI Tiny Transformer tuning completed.
+Best configuration: {'learning_rate': 0.001, 'dropout': 0.3, 'weight_decay': 0.0001, 'num_heads': 4}
+Best validation macro-F1: 0.9109254706937646
+Best model: d_model 68, 77729 parameters (send this to Sanjana)
+Tuning CSV saved to: results/raw/tuning_tiny_transformer.csv
+Best config saved to: configs/best/tiny_transformer.yaml

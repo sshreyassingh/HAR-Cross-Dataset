@@ -1,0 +1,7 @@
+git commit: 90f0730cfa9ddd7042a75c121520ce75ee65c5b5
+torch 2.4.1+cpu  numpy 1.26.4  cpu: AMD EPYC 7763 64-Core Processor  logical cores: 2  MHA fast path off
+transformer FLOP cross-check: counter 1555160 vs hand count 1555160 (0.0% apart)
+cnn          params=  75335  flops=  2464200  size=0.3104 MB  latency median=0.281 ms  p95=0.494 ms
+tcn          params=  76640  flops=  7546890  size=0.3265 MB  latency median=1.303 ms  p95=2.553 ms
+tiny_transformer params=  77729  flops=  1555160  size=0.3209 MB  latency median=0.562 ms  p95=0.964 ms
+saved results/tables/efficiency.csv

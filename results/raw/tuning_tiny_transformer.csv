@@ -1,0 +1,5 @@
+model,dataset,split,seed,trial,learning_rate,dropout,weight_decay,num_heads,val_macro_f1,best_epoch,is_best
+tiny_transformer,uci,0,0,1,0.0003,0.5,0.0001,2,0.8822533965910019,9,False
+tiny_transformer,uci,0,0,2,0.001,0.3,0.0001,4,0.9109254706937646,5,True
+tiny_transformer,uci,0,0,3,0.003,0.3,0.0,4,0.9024025070669037,10,False
+tiny_transformer,uci,0,0,4,0.001,0.5,0.0001,4,0.8931347502353383,5,False

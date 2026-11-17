@@ -27,7 +27,7 @@ Full details are in `docs/DECISIONS.md`. Do not change these without adding a ne
 | Splits | 3 fixed subject-wise splits per domain; seed k uses split k |
 | Models | CNN, TCN, Tiny Transformer, about 75k parameters each (within 10% of each other) |
 | Training | Adam, batch 128, max 30 epochs, early stop (patience 5) on source-val macro F1, class-weighted loss |
-| Tuning | 8 random configs per model per core source (split 0, seed 0, max 15 epochs) |
+| Tuning | 4 random configs per model UCI-HAR only (split 0, seed 0, max 10 epochs); best config reused for WISDM and PAMAP2-hand. Details: PROTOCOL.md  |
 | Final runs | Best config, seeds 0, 1, 2 |
 | Headline metric | Macro F1 (accuracy also reported); drop = within-dataset minus cross-dataset |
 

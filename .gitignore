@@ -261,5 +261,9 @@ checkpoints/
 # Keep empty result folders
 results/raw/*
 !results/raw/.gitkeep
+!results/raw/*.csv
 results/tables/*
+!results/tables/*.csv
 !results/tables/.gitkeep
+
+

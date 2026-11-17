@@ -1,0 +1,5 @@
+pca_domain_silhouette: 0.4089563333042933
+pca_activity_silhouette: -0.036164114913877055
+tsne_domain_silhouette: 0.38128888607025146
+tsne_activity_silhouette: -0.021293573081493378
+pca_explained_variance: [0.2339700344699695, 0.16374242008855883]
